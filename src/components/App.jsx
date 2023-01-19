@@ -44,22 +44,22 @@ export class App extends Component {
             <div>
                 <Section title="Please leave feedback">
                 <FeedbackOptions 
-                  options={['Good', 'Neutral', 'Bad']}
-                  onLeaveFeedback={this.countClick}
+                    options={['Good', 'Neutral', 'Bad']}
+                    onLeaveFeedback={this.countClick}
                 />
                 </Section>
 
                 <Section title="Statistics">
                 {this.countTotalFeedback() !== 0
                 ? <Statistics
-                 good={this.state.good}
-                 neutral={this.state.neutral}
-                 bad={this.state.bad}
-                 total={this.countTotalFeedback()}
-                 positivePercentage={this.countPositiveFeedbackPercentage()}
+                    good={this.state.good}
+                    neutral={this.state.neutral}
+                    bad={this.state.bad}
+                    total={this.countTotalFeedback()}
+                    positivePercentage={this.countPositiveFeedbackPercentage()}
                 />
                 : <Notification 
-                message="There is no feedback"
+                    message="There is no feedback"
                 />}   
                 </Section>
 
